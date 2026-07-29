@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미라시스 원격지원</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0;
+    font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
+    background: #f4f7fb; color: #1a1a1a;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 24px 18px 60px; }
+  .head {
+    background: #1558b0; color: #fff; border-radius: 16px;
+    padding: 26px 20px; text-align: center; margin-bottom: 22px;
+    box-shadow: 0 6px 18px rgba(21,88,176,.25);
+  }
+  .head h1 { margin: 0; font-size: 30px; letter-spacing: 1px; }
+  .head p  { margin: 8px 0 0; font-size: 18px; color: #cfe3ff; }
+
+  .btn {
+    display: block; width: 100%;
+    background: #ff6f00; color: #fff; text-decoration: none;
+    font-size: 30px; font-weight: bold; text-align: center;
+    padding: 26px 16px; border-radius: 16px; border: none;
+    cursor: pointer; box-shadow: 0 6px 0 #c85700;
+    margin: 10px 0 6px;
+  }
+  .btn:active { transform: translateY(4px); box-shadow: 0 2px 0 #c85700; }
+  .btn small { display:block; font-size: 16px; font-weight: normal; margin-top: 6px; color:#ffe8d6; }
+
+  .hint { text-align:center; font-size: 17px; color:#555; margin: 4px 0 26px; }
+
+  .steps { background:#fff; border-radius:16px; padding: 10px 6px; box-shadow: 0 3px 10px rgba(0,0,0,.06); }
+  .step { display:flex; align-items:center; gap:16px; padding: 16px 14px; border-bottom:1px solid #eef2f7; }
+  .step:last-child { border-bottom:none; }
+  .num {
+    flex:0 0 auto; width:52px; height:52px; border-radius:50%;
+    background:#1558b0; color:#fff; font-size:26px; font-weight:bold;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step .txt { font-size: 21px; line-height:1.4; }
+  .step .txt b { color:#c33; }
+
+  .call {
+    margin-top: 26px; text-align:center; font-size: 19px; color:#333;
+    background:#fff; border-radius:14px; padding: 18px; box-shadow: 0 3px 10px rgba(0,0,0,.06);
+  }
+  .call a { color:#1558b0; font-weight:bold; text-decoration:none; font-size:24px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="head">
+      <h1>🖥️ 원격지원</h1>
+      <p>아래 큰 버튼을 눌러주세요</p>
+    </div>
+
+    <!-- ▼▼ 이름이 _mirasys313 인 파일을 같은 사이트(GitHub)에서 받아야 ID가 유지됩니다 ▼▼ -->
+    <a id="dl" class="btn" href="ezHelpClient_mirasys313.exe" download>
+      원격 프로그램 받기
+      <small>(누르면 자동으로 내려받아집니다)</small>
+    </a>
+    <p class="hint">잠시 기다리면 자동으로 시작됩니다. 안 되면 위 버튼을 눌러주세요.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <div class="txt">화면 <b>오른쪽 위</b>(또는 아래)에 나온 <b>받은 파일</b>을 <b>한 번 누릅니다</b>.</div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div class="txt">"이 앱이 변경하도록 허용?" 창이 뜨면 <b>「예」</b>를 누릅니다.</div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div class="txt">파란 창이 열리면 아래 <b>「검색」</b> 버튼을 누릅니다.</div>
+      </div>
+      <div class="step">
+        <div class="num">4</div>
+        <div class="txt"><b>「미라시스」</b> 상담원이 보이면 <b>누릅니다</b> → 연결 완료!</div>
+      </div>
+    </div>
+
+    <div class="call">
+      잘 안 되시면 전화 주세요<br>
+      <a href="tel:">📞 기사님께 전화하기</a>
+    </div>
+
+  </div>
+
+<script>
+  // 페이지 열면 1.2초 뒤 자동으로 다운로드 시작 (버튼도 그대로 사용 가능)
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      window.location.href = document.getElementById('dl').href;
+    }, 1200);
+  });
+</script>
+</body>
+</html>
